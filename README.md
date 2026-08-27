@@ -34,14 +34,9 @@ In my case, CET is 5 hours ahead of Eastern Daylight Time (EDT).
 12:00 PM CET = 7:00 AM EDT
 In the terminal:
 `crontab -e`
+
+
 `0 7 * * * /home/project/rx_poc.sh`
 
-┌──────── minute       0
-│ ┌────── hour         7
-│ │ ┌──── day/month    *
-│ │ │ ┌── month        *
-│ │ │ │ ┌ day/week     *
-│ │ │ │ │
-0 6 * * *
 
 
