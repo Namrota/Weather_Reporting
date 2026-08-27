@@ -26,3 +26,22 @@ You must extract and store the following data every day at noon, local time, for
 The actual temperature (in degrees Celsius)
 
 The forecasted temperature (in degrees Celsius) for the following day at noon
+
+### Scheduling the task:
+To schedule the job I am using CRON here:
+It is essential first to calculate the time difference from your region in order to know what time should be given in EDT so that the job runs at noon in your region.
+In my case, CET is 5 hours ahead of Eastern Daylight Time (EDT).
+12:00 PM CET = 7:00 AM EDT
+In the terminal:
+`crontab -e`
+`0 7 * * * /home/project/rx_poc.sh`
+
+┌──────── minute       0
+│ ┌────── hour         7
+│ │ ┌──── day/month    *
+│ │ │ ┌── month        *
+│ │ │ │ ┌ day/week     *
+│ │ │ │ │
+0 6 * * *
+
+
